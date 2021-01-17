@@ -66,7 +66,8 @@ class QuestionView extends Component {
         this.setState({
           questions: result.questions,
           totalQuestions: result.total_questions,
-          currentCategory: result.current_category })
+          currentCategory: result.current_category 
+        })
         return;
       },
       error: (error) => {
@@ -103,7 +104,7 @@ class QuestionView extends Component {
 
   questionAction = (id) => (action) => {
     if(action === 'DELETE') {
-      if(window.confirm('are you sure you want to delete the question?')) {
+      if(window.confirm('Are you sure you want to delete the question?')) {
         $.ajax({
           url: `/questions/${id}`, //TODO: update request URL
           type: "DELETE",

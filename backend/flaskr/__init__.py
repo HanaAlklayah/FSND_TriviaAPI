@@ -11,6 +11,8 @@ import random
 
 from models import setup_db, Question, Category
 
+from utils import get_paginated_questions
+
 QUESTIONS_PER_PAGE = 10
 
 def create_app(test_config=None):
@@ -56,16 +58,6 @@ def create_app(test_config=None):
     except Exception:
       abort(500)
 
-  #added
-  def get_paginated_questions(request, questions, num_of_questions):
-    page = request.args.get('page', 1, type=int)
-    start = (page - 1) * num_of_questions
-    end = start + num_of_questions
-
-    questions = [question.format() for question in questions]
-    current_questions = questions[start:end]
-
-    return current_questions
   '''
   @TODO: 
   Create an endpoint to handle GET requests for questions, 
