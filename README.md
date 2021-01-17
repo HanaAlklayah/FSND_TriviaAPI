@@ -56,6 +56,14 @@ The app allows one to:
          404 – resource not found
          422 – unprocessable
          500 – internal server error
+         
+   Sample response:
+
+        {
+          "error": 422,
+          "message": "Not processable",
+          "success": false
+        }
 
   ### Endpoints
    #### GET /categories
