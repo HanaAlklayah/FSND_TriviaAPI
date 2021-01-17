@@ -1,4 +1,4 @@
-# Full Stack API Trivia Project
+# Full Stack Trivia API Project
 
 ## Introduction
 Trivia api is a web application that allows people to hold trivia on a regular basis using a webpage to manage the trivia app and play the game.
